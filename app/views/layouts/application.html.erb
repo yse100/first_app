@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Praprag Books Online Store</title>
+  <%= stylesheet_link_tag    "scaffold" %>
+  <%= stylesheet_link_tag "depot", :media=> "all" %>
+  <%= javascript_include_tag :default %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="store">
+	<div id="banner">
+		<%= image_tag("logo.png") %>
+		<%= @page_title || "Pragmatic Bookshelf" %>
+	</div>
+	<div id="colums">
+		<div id="side">
+			<div id="cart">
+				<%= render @cart %>
+			</div>
+			<a href="http://localhost:3000">Home</a><br />
+			<a href="http://www..../fag">Question</a><br />
+			<a href="http://www..../news">News</a><br />
+			<a href="http://www..../concact">Concact</a><br />
+		</div>
+		<div id="main">
+			<%= yield %>		
+		</div>
+	</div>
+</body>
+</html>
